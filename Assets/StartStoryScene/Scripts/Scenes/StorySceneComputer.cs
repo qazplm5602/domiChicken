@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -91,7 +92,9 @@ public class StorySceneComputer : StoryScene
             StoryTalkBox.Instance.SetTalk(StoryTalkBox.Animation.Left, "시로코", "시스템 엔지니어", "일단 이 돈을 어떻게 해결하지....");
         } else if (part == 12) {
             blackImage.color = new Color(0,0,0,0);
+            blackImage.transform.GetChild(0).gameObject.SetActive(false);
             _screenBlack.SetAsLastSibling();
+            
             blackImage.DOFade(1, 2).OnComplete(() => SceneManager.LoadScene("ChickenTutorial"));
             _manager.EndScene();
         }

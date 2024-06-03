@@ -84,6 +84,6 @@ public class TutorialBoxUI : MonoBehaviour
     }
 
     public void Show() {
-        _screen.DOAnchorPosY(0, 0.5f);
+        _screen.DOAnchorPosY(0, 0.5f).SetEase(Ease.OutQuart);
     }
 }
