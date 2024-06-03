@@ -20,12 +20,20 @@ public class TutorialBoxUI : MonoBehaviour
     [SerializeField] Transform circleList;
     [SerializeField] GameObject circle;
 
+    [Header("buttons")]
+    [SerializeField] Button leftBtn;
+    [SerializeField] Button rightBtn;
+    [SerializeField] Sprite arrowTxd, finishTxd;
+
     int page = -1;
     Sequence sequence;
 
     private void Awake() {
         for (int i = 0; i < list.Length; i++)
             Instantiate(circle, circleList);
+        
+        leftBtn.onClick.AddListener(() => SetPage(false));
+        rightBtn.onClick.AddListener(() => SetPage(true));
     }
 
     private void Start() {
@@ -67,6 +75,12 @@ public class TutorialBoxUI : MonoBehaviour
         sequence.Join(nextScreen.transform.DOScale(Vector3.one, 0.3f));
         sequence.Join(nextScreen.transform.DOAnchorPosX(0, 0.3f));
         sequence.Join(canvasGroup2.DOFade(1, 0.3f));
+
+        if (next && page >= list.Length - 1) {
+            rightBtn.image.sprite = finishTxd;
+        } else if (!next && page >= list.Length - 2) {
+            rightBtn.image.sprite = arrowTxd;
+        }
     }
 
     void ScreenHide(RectTransform transform, bool left) {
