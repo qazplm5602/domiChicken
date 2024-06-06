@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 8466474622638055093}
   - component: {fileID: 6697758616770426326}
   - component: {fileID: 4988845348181629069}
+  - component: {fileID: 2585665346823677537}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -122,6 +123,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2585665346823677537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4415745052308193465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1264e9c97ea414743a37961172d5db8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4806385773007793842
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +356,8 @@ GameObject:
   - component: {fileID: 4485582894882896231}
   - component: {fileID: 4583495034357222495}
   - component: {fileID: 5309779518108394246}
+  - component: {fileID: 6215653647213234749}
+  - component: {fileID: 7278477600305680058}
   m_Layer: 5
   m_Name: Window
   m_TagString: Untagged
@@ -409,6 +424,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.43
+--- !u!225 &6215653647213234749
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376670210484192913}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &7278477600305680058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376670210484192913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e1d14272d27a442888ecaef4d34620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Type>k__BackingField: 0
+  header: {fileID: 2585665346823677537}
+  close: {fileID: 1661667221639965767}
 --- !u!1 &6849908999810429711
 GameObject:
   m_ObjectHideFlags: 0

@@ -686,8 +686,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290822336
-  m_fontColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+    rgba: 4289309101
+  m_fontColor: {r: 0.6792453, g: 0.66322535, b: 0.66322535, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1822,12 +1822,12 @@ PrefabInstance:
     - target: {fileID: 4485582894882896231, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 4485582894882896231, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -14.1383
+      value: -86
       objectReference: {fileID: 0}
     - target: {fileID: 4485582894882896231, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}
@@ -1863,6 +1863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CountertopWindow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278477600305680058, guid: ead3f56d88460fb4ab99352b289b6d07,
+        type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8989934861458556571, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}

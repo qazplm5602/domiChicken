@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 2137925201576384902}
   - component: {fileID: 8920968941720965162}
   - component: {fileID: 8179274915512116332}
+  - component: {fileID: 5561826340535800599}
   m_Layer: 5
   m_Name: WinButton
   m_TagString: Untagged
@@ -350,6 +351,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5561826340535800599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2924012312100505488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f1606ed8f0e1640b0f7cff21e02673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &3459752241201021671
 GameObject:
   m_ObjectHideFlags: 0

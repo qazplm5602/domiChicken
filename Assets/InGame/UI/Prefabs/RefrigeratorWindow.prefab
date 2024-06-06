@@ -2331,6 +2331,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RefrigeratorWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 7278477600305680058, guid: ead3f56d88460fb4ab99352b289b6d07,
+        type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8989934861458556571, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}
       propertyPath: m_text
