@@ -10,7 +10,7 @@ public class DragRequest : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     protected RectTransform dragItem = null;
     Canvas _canvas;
     
-    private void Awake() {
+    protected void Awake() {
         _canvas = FindObjectOfType<Canvas>();
     }
 

@@ -20,7 +20,7 @@ public class DomiItem : ScriptableObject
     
     [SerializeField] string id;
     [SerializeField] new string name;
-    [SerializeField] string description;
+    [SerializeField, TextArea] string description;
     [SerializeField] Sprite image;
     [SerializeField] Sprite image_big;
 
