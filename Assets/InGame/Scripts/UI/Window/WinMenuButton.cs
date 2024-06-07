@@ -22,11 +22,16 @@ public class WinMenuButton : MonoBehaviour
     }
 
     private void OnDestroy() {
-        WindowManager.Instance.OnFocus -= OnWindowFocus;
+        if (WindowManager.Instance)
+            WindowManager.Instance.OnFocus -= OnWindowFocus;
+
+        if (window)
+            window.OnClose -= OnWindowClose;
     }
 
     private void Start() {
         window = WindowManager.Instance.GetWindow(type); // 캐싱
+        window.OnClose += OnWindowClose;
     }
 
     private void BtnClick()
@@ -36,5 +41,10 @@ public class WinMenuButton : MonoBehaviour
 
     private void OnWindowFocus(WindowType type) {
         borderImg.color = this.type == type ? Color.cyan : Color.gray;   
+    }
+
+    private void OnWindowClose()
+    {
+        borderImg.color = Color.gray;   
     }
 }

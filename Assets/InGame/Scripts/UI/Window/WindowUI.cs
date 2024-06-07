@@ -39,9 +39,10 @@ public class WindowUI : MonoBehaviour, IPointerDownHandler
         (transform as RectTransform).anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if (transform.parent.childCount - 1 != transform.GetSiblingIndex()) {
+    public void OnPointerDown(PointerEventData eventData) => OnPointerDown(eventData, true);
+
+    public void OnPointerDown(PointerEventData eventData, bool focusEvent) {
+        if (focusEvent && transform.parent.childCount - 1 != transform.GetSiblingIndex()) {
             OnFocus?.Invoke();
         }
         
@@ -57,7 +58,8 @@ public class WindowUI : MonoBehaviour, IPointerDownHandler
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.interactable = true;
-        OnPointerDown(null); // 여는 동시에 맨앞
+        OnPointerDown(null, false); // 여는 동시에 맨앞
+        OnFocus?.Invoke(); // focus 이벤트 무조건 함
     }
 
     public void Close() {
