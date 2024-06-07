@@ -96,6 +96,11 @@ public class RefrigeratorSystem : MonoBehaviour
         btnTrm.GetComponentInChildren<TextMeshProUGUI>().color = active ? Color.white : Color.black;
     }
 
+    public void GiveInventory(DomiItem item) {
+        inventory.Add(item);
+        ShowContent(currnetCategoryIdx);
+    }
+
     public void RemoveItem(DomiItem domiItem)
     {
         inventory.Remove(domiItem);
