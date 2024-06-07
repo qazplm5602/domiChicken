@@ -1,5 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +24,10 @@ public class RefrigeratorSystem : MonoBehaviour
     [Header("Category")]
     [SerializeField] Transform categorySection;
     [SerializeField] Button categoryTempleate;
+    int currnetCategoryIdx = 0;
+
+    [SerializeField] Transform content;
+    [SerializeField] GameObject contentBox;
 
     private void Awake() {
         // SO 복사
@@ -33,9 +38,59 @@ public class RefrigeratorSystem : MonoBehaviour
             }
         }
         
+        int v = 0;
+        foreach (var item in categories)
+        {
+            int idx = v;
+            var button = Instantiate(categoryTempleate, categorySection);
+            button.GetComponentInChildren<TextMeshProUGUI>().text = item.title;
+            button.onClick.AddListener(() => ShowContent(idx));
+            v++;
+        }
         
+        ShowContent(0);
     }
 
+    public void ClearContent() {
+        for (int i = 0; i < content.childCount; i++)
+            Destroy(content.GetChild(i).gameObject);
+    }
 
+    public void ShowContent(int categoryIdx) {
+        ClearContent();
+        
+        // 카테고리 버튼 색상 바꾸기
+        CategoryActive(currnetCategoryIdx, false);
+        currnetCategoryIdx = categoryIdx;
+        CategoryActive(currnetCategoryIdx, true);
 
+        DomiItem[] renderItems;
+        RefrigeratorCategory category = categories[categoryIdx];
+        
+        if (category.item == ItemType.Ingredient) {
+            renderItems = inventory.Where(v => v.GetItemType() == category.item && ((category.title == "닭") == ((v as IngredientItem).ingredientType == IngredientItemType.RawChicken))).ToArray();
+        } else if (category.item != ItemType.Unknown) {
+            renderItems = inventory.Where(v => v.GetItemType() == category.item).ToArray();
+        } else {
+            renderItems = inventory.ToArray();
+        }
+
+        if (renderItems == null) return;
+
+        foreach (var item in renderItems)
+        {
+            CreateItem(item);   
+        }
+    }
+
+    void CreateItem(DomiItem item) {
+        var box = Instantiate(contentBox, content);
+        box.transform.Find("Icon").GetComponent<Image>().sprite = item.GetImage();
+    }
+
+    void CategoryActive(int idx, bool active) {
+        var btnTrm = categorySection.GetChild(idx);
+        btnTrm.GetComponent<Image>().color = active ? Color.black : new Color32(228,228,228,255);
+        btnTrm.GetComponentInChildren<TextMeshProUGUI>().color = active ? Color.white : Color.black;
+    }
 }
