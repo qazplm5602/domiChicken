@@ -14,6 +14,7 @@ public class DropResponse : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        print($"OnDrop {gameObject}");
         bool hasRequest = eventData.pointerDrag.TryGetComponent<DragRequest>(out var request);
         if (!hasRequest) return;
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -85,6 +86,7 @@ public class RefrigeratorSystem : MonoBehaviour
 
     void CreateItem(DomiItem item) {
         var box = Instantiate(contentBox, content);
+        box.GetComponent<RefrigeratorDrag>().Init(this, item);
         box.transform.Find("Icon").GetComponent<Image>().sprite = item.GetImage();
     }
 
@@ -92,5 +94,11 @@ public class RefrigeratorSystem : MonoBehaviour
         var btnTrm = categorySection.GetChild(idx);
         btnTrm.GetComponent<Image>().color = active ? Color.black : new Color32(228,228,228,255);
         btnTrm.GetComponentInChildren<TextMeshProUGUI>().color = active ? Color.white : Color.black;
+    }
+
+    public void RemoveItem(DomiItem domiItem)
+    {
+        inventory.Remove(domiItem);
+        ShowContent(currnetCategoryIdx);
     }
 }
