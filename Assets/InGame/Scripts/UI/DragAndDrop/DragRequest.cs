@@ -26,11 +26,14 @@ public class DragRequest : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
-        dragItem.anchoredPosition += eventData.delta / _canvas.scaleFactor;
+        if (dragItem)
+            dragItem.anchoredPosition += eventData.delta / _canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        // if (dragItem == null) return;
+        
         DropResponseData data = DragDropManager.Instance.GetResponseData();
         OnDropEvent(data.window == windowType, data.result);
 

@@ -14,7 +14,10 @@ public class FryerDragSys : DragRequest
 
     protected override RectTransform CreateDragItem()
     {
-        Sprite icon = _system.GetDomiItem().GetImage();
+        DomiItem item = _system.GetDomiItem();
+        if (item == null) return null; // 아이템 없음
+        
+        Sprite icon = item.GetImage();
         
         var dragObj = new GameObject("drag");
         var dragTrm = dragObj.AddComponent<RectTransform>();
@@ -32,7 +35,9 @@ public class FryerDragSys : DragRequest
 
     protected override void OnDropEvent(bool winBoth, bool result)
     {
-        Destroy(dragItem.gameObject);
+        if (dragItem)
+            Destroy(dragItem.gameObject);
+            
         if (!result) return;
 
         _system.Reset();
