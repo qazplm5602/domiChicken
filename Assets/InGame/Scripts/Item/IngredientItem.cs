@@ -13,4 +13,12 @@ public enum IngredientItemType {
 public class IngredientItem : DomiItem
 {
     [field: SerializeField] public IngredientItemType ingredientType { get; private set; }
+
+    public override bool ItemEquals(DomiItem target)
+    {
+        IngredientItem item = target as IngredientItem;
+        if (item == null) return false;
+
+        return ingredientType == item.ingredientType;
+    }
 }

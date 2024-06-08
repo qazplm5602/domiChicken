@@ -1,17 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CountertopTableSystem : DropResponse, IDomiItemHandler
 {
-    DragRequest myDragSys;
     [SerializeField] Image icon;
+    [SerializeField] CountertopRecipeBookSO[] recipeGroups;
 
+    DragRequest myDragSys;
     DomiItem currentItem = null;
+
+    List<CountertopRecipe> recipes;
 
     private void Awake() {
         myDragSys = GetComponent<DragRequest>();
+
+        recipes = new();
+        foreach (var group in recipeGroups)
+            foreach (var item in group.recipes)
+                recipes.Add(item);
     }
 
     public DomiItem GetDomiItem() => currentItem;
@@ -56,7 +65,14 @@ public class CountertopTableSystem : DropResponse, IDomiItemHandler
         }
 
         // 조합법 찾고 할 예정
+        CountertopRecipe recipe = recipes.Find(v => (currentItem.ItemEquals(v.item1) || currentItem.ItemEquals(v.item2)) && (item.ItemEquals(v.item1) || item.ItemEquals(v.item2)));
+        if (recipe.finalItem == null) return false;
 
-        return false;
+        print($"조합 완료. {recipe.item1} + {recipe.item2} = {recipe.finalItem}");
+
+        currentItem = recipe.finalItem;
+        UpdateTableUI();
+
+        return true;
     }
 }

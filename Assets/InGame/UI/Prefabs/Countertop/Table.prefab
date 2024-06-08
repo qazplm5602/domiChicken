@@ -169,6 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowType: 3
   icon: {fileID: 116344520591514059}
+  recipeGroups:
+  - {fileID: 11400000, guid: 4ee481f8635d47a498d4d4903488872c, type: 2}
 --- !u!114 &1408407115735715941
 MonoBehaviour:
   m_ObjectHideFlags: 0

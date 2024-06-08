@@ -16,4 +16,12 @@ public class ChickenItem : DomiItem
     [SerializeField] ChickenItemType chickenType;
     
     public ChickenItemType GetChickenType() => chickenType;
+
+    public override bool ItemEquals(DomiItem target)
+    {
+        ChickenItem item = target as ChickenItem;
+        if (item == null) return false;
+
+        return chickenType == item.chickenType;
+    }
 }

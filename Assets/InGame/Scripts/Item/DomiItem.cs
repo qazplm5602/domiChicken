@@ -28,4 +28,5 @@ public class DomiItem : ScriptableObject
     public string GetDesc() => description;
     public ItemType GetItemType() => type;
     public Sprite GetImage(bool big = false) => big ? image_big : image;
+    public virtual bool ItemEquals(DomiItem target) => type == target.type;
 }
