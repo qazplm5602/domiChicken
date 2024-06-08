@@ -2364,6 +2364,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e1d14272d27a442888ecaef4d34620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1370481008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 493231138843971573, guid: b1a7b64380286704cbe39e2b3ad2dc69,
+    type: 3}
+  m_PrefabInstance: {fileID: 8922743890864066617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1370481012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370481008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f5c7d9d03c8b46469867629a3a31f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowType: 3
 --- !u!1001 &1414502379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4352,6 +4371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountertopWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 8594569070916808603, guid: b1a7b64380286704cbe39e2b3ad2dc69,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4360,6 +4384,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2105485072}
+    - targetCorrespondingSourceObject: {fileID: 493231138843971573, guid: b1a7b64380286704cbe39e2b3ad2dc69,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1370481012}
   m_SourcePrefab: {fileID: 100100000, guid: b1a7b64380286704cbe39e2b3ad2dc69, type: 3}
 --- !u!224 &8922743890864066618 stripped
 RectTransform:
