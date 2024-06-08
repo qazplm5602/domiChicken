@@ -169,8 +169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windowType: 3
   icon: {fileID: 116344520591514059}
+  knife: {fileID: 11400000, guid: 7d5f119f3a02b6642839b59447766e09, type: 2}
   recipeGroups:
   - {fileID: 11400000, guid: 4ee481f8635d47a498d4d4903488872c, type: 2}
+  - {fileID: 11400000, guid: c563c612adc56d340a34a30cdb7ba7b3, type: 2}
 --- !u!114 &1408407115735715941
 MonoBehaviour:
   m_ObjectHideFlags: 0
