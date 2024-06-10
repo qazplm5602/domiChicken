@@ -64,7 +64,7 @@ public class CountertopTableSystem : DropResponse, IDomiItemHandler
 
 
         // 조합법 찾고 할 예정
-        CountertopRecipe recipe = recipes.Find(v => (currentItem.ItemEquals(v.item1) || currentItem.ItemEquals(v.item2)) && (item.ItemEquals(v.item1) || item.ItemEquals(v.item2)));
+        CountertopRecipe recipe = recipes.Find(v => (currentItem.ItemEquals(v.item1) || currentItem.ItemEquals(v.item2)) && (item.ItemEquals(v.item1) || item.ItemEquals(v.item2)) && (v.item1.ItemEquals(v.item2) == currentItem.ItemEquals(item)));
         if (recipe.finalItem == null) return false;
 
         print($"조합 완료. {recipe.item1} + {recipe.item2} = {recipe.finalItem}");
