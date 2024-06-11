@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8363338320756578393}
   - component: {fileID: 1334657879733130576}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +290,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 109.5, y: 18.9}
-  m_SizeDelta: {x: 518.9473, y: 31.9662}
+  m_SizeDelta: {x: 550.6365, y: 31.9662}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1585977888425916843
 CanvasRenderer:
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 1435588529718107743}
   - component: {fileID: 6412602462951815872}
   m_Layer: 5
-  m_Name: 'Icon '
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,7 +576,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 109.5, y: -12.836998}
-  m_SizeDelta: {x: 518.9473, y: 25.6739}
+  m_SizeDelta: {x: 550.6365, y: 25.6739}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5214618873911495595
 CanvasRenderer:
