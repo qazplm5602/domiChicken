@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +24,12 @@ public class DomiShopSystem : MonoBehaviour
     [Space]
     [SerializeField] Transform menuSection;
     [SerializeField] Button menuTemplate;
-    
+
+    [Space]
+    [SerializeField] Transform itemSection;
+    [SerializeField] GameObject itemBox;
+
+    [Space]
     DomiShopBasket basket;
     Dictionary<DomiItem, int> cachePrice;
     
@@ -33,10 +39,20 @@ public class DomiShopSystem : MonoBehaviour
         
         cachePrice = new();
 
-        foreach (var item in menus)
+        int i = 0;
+        foreach (var item in menus) {
             foreach (var item2 in item.sellItems) {
                 cachePrice[item2.item] = item2.price;
             }
+
+            // 메뉴 추가
+            int idx = i;
+            var menu = Instantiate(menuTemplate, menuSection);
+            menu.GetComponentInChildren<TextMeshProUGUI>().text = item.name;
+            menu.onClick.AddListener(() => Open(idx));
+
+            i++;
+        }
     }
 
     private void Start() {
@@ -58,5 +74,20 @@ public class DomiShopSystem : MonoBehaviour
 
     public int GetPriceItem(DomiItem item) {
         return cachePrice[item];
+    }
+
+    public void Open(int idx) {
+        // 클리어
+        for (int i = 0; i < itemSection.childCount; i++)
+            Destroy(itemSection.GetChild(i).gameObject);
+
+        foreach (var data in menus[idx].sellItems)
+        {
+            var box = Instantiate(itemBox, itemSection).transform;
+            box.Find("IconContainer/Image").GetComponent<Image>().sprite = data.item.GetImage();
+            box.Find("Title").GetComponent<TextMeshProUGUI>().text = data.item.GetName();
+            box.Find("Desc").GetComponent<TextMeshProUGUI>().text = data.item.GetDesc();
+            box.Find("Button/Price").GetComponent<TextMeshProUGUI>().text = $"{data.price:N0}";
+        }
     }
 }
