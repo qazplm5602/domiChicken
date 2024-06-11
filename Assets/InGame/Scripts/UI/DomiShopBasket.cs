@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class DomiShopBasket : MonoBehaviour
     [SerializeField] Transform _section;
     [SerializeField] GameObject _boxTemplate;
     [SerializeField] TextMeshProUGUI _priceSumT;
+    [SerializeField] Button buyBtn;
     TextMeshProUGUI _mentionT;
 
     Dictionary<DomiItem, int> baskets;
@@ -26,6 +28,8 @@ public class DomiShopBasket : MonoBehaviour
         baskets = new Dictionary<DomiItem, int>();
         basketUI = new();
         _mentionT = _mention.GetComponentInChildren<TextMeshProUGUI>();
+
+        buyBtn.onClick.AddListener(BuyClick);
     }
 
     public void Add(DomiItem item) {
@@ -85,13 +89,32 @@ public class DomiShopBasket : MonoBehaviour
         _mentionT.text = baskets.Count.ToString();
         _mention.SetActive(true);
     }
-
-    void SumUpdate() {
+    
+    int SumPrice() {
         int sum = 0;
         foreach (var item in baskets) {
             sum += _system.GetPriceItem(item.Key) * item.Value;
         }
 
+        return sum;
+    }
+
+    void SumUpdate() {
+        int sum = SumPrice();
         _priceSumT.text = $"총 금액 {sum:N0}원";
+    }
+    
+    void BuyClick() {
+        int sum = SumPrice();
+
+        if (!MoneySystem.Instance.TryGetPayment(sum)) return;
+
+        foreach (var item in baskets) {
+            RefrigeratorSystem.Instance.GiveInventory(Instantiate(item.Key));
+        }
+
+        foreach (var item in baskets.ToArray()) {
+            Remove(item.Key, true);
+        }
     }
 }

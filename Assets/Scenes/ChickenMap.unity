@@ -129,6 +129,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4594180836044468438}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &42153531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4273207779924565191, guid: 01000f69c3e9a0c479666920e10e7ba9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2513868368797496319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &84570242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,7 +3306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f13a61758f1f244aa7570fed14ebd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _money: 0
+  _money: 12345678
   moneyT: {fileID: 1135046810}
 --- !u!1 &1945459657
 GameObject:
@@ -3945,6 +3957,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 969566680786346897, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: buyBtn
+      value: 
+      objectReference: {fileID: 42153531}
     - target: {fileID: 1577321829699246956, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
       propertyPath: m_AnchorMax.x

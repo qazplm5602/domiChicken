@@ -11,7 +11,7 @@ struct RefrigeratorCategory {
     public ItemType item;
 }
 
-public class RefrigeratorSystem : MonoBehaviour
+public class RefrigeratorSystem : MonoSingleton<RefrigeratorSystem>
 {
     [SerializeField] List<DomiItem> inventory;
     RefrigeratorCategory[] categories = new RefrigeratorCategory[] {

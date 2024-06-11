@@ -12,14 +12,15 @@ public class MoneySystem : MonoSingleton<MoneySystem>
         UpdateUI();
     }
 
-    bool EnoughMoney(int value) => _money < value;
-    int GetMoney() => _money;
+    public bool EnoughMoney(int value) => _money >= value;
+    public int GetMoney() => _money;
 
-    void SetMoney(int value) {
+    public void SetMoney(int value) {
         _money = value;
+        UpdateUI();
     }
 
-    bool TryGetPayment(int value) {
+    public bool TryGetPayment(int value) {
         if (!EnoughMoney(value)) return false;
         
         SetMoney(_money - value);
