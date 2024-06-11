@@ -16,5 +16,6 @@ MonoBehaviour:
   id: 
   name: "\uC0DD \uB2ED"
   description: "\uADF8\uB0E5 \uC548\uD280\uAE34 \uB2ED"
-  image: {fileID: 21300000, guid: 071a31efb26fac0469535ef0a0b0a6e7, type: 3}
+  image: {fileID: 21300000, guid: 0a8ec0f1d186704438a399780709dc12, type: 3}
+  image_big: {fileID: 21300000, guid: a0c24751182f2084aad4748ac7e57c7b, type: 3}
   <ingredientType>k__BackingField: 0

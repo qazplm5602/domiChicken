@@ -16,5 +16,6 @@ MonoBehaviour:
   id: 
   name: "\uD6C4\uB77C\uC774\uB4DC \uCE58\uD0A8"
   description: "\uADF8\uB0E5 \uBC14\uC0AD\uD55C \uCE58\uD0A8"
-  image: {fileID: 21300000, guid: 862ddc3ef3598fd45aa78ccd2f84d5bf, type: 3}
+  image: {fileID: 21300000, guid: e3fdaff99b37df94a8833dcaf93ee68a, type: 3}
+  image_big: {fileID: 21300000, guid: de8f20d92bd894347af087ab6bd5b043, type: 3}
   chickenType: 0

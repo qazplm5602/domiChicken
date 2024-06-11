@@ -7,6 +7,8 @@ public enum ChickenItemType {
     Seasoned, // 양념
     Soy, // 간장
     Soy_RiceCake, // 간장 & 떡
+    Garlic, // 마늘
+    Garlic_RiceCake, // 마늘 & 떡
     WTF // 탄 치킨
 }
 
