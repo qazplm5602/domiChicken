@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -30,12 +31,18 @@ public class DomiShopSystem : MonoBehaviour
     [SerializeField] GameObject itemBox;
 
     [Space]
+    [SerializeField] GameObject itemListSection;
+    [SerializeField] GameObject basketScreen;
+    [SerializeField] Button basketBtn;
+
     DomiShopBasket basket;
     Dictionary<DomiItem, int> cachePrice;
     
     private void Awake() {
         basket = GetComponent<DomiShopBasket>();
         basket.Init();
+
+        basketBtn.onClick.AddListener(OpenBasket);
         
         cachePrice = new();
 
@@ -53,23 +60,25 @@ public class DomiShopSystem : MonoBehaviour
 
             i++;
         }
+
+        Open(0);
     }
 
     private void Start() {
         // TEST
-        foreach (var item in menus)
-            foreach (var item2 in item.sellItems) {
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-                basket.Add(item2.item);
-            }
+        // foreach (var item in menus)
+        //     foreach (var item2 in item.sellItems) {
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //         basket.Add(item2.item);
+        //     }
     }
 
     public int GetPriceItem(DomiItem item) {
@@ -77,6 +86,9 @@ public class DomiShopSystem : MonoBehaviour
     }
 
     public void Open(int idx) {
+        itemListSection.SetActive(true);
+        basketScreen.SetActive(false);
+
         // 클리어
         for (int i = 0; i < itemSection.childCount; i++)
             Destroy(itemSection.GetChild(i).gameObject);
@@ -88,6 +100,15 @@ public class DomiShopSystem : MonoBehaviour
             box.Find("Title").GetComponent<TextMeshProUGUI>().text = data.item.GetName();
             box.Find("Desc").GetComponent<TextMeshProUGUI>().text = data.item.GetDesc();
             box.Find("Button/Price").GetComponent<TextMeshProUGUI>().text = $"{data.price:N0}";
+            
+            // 버튼
+            box.Find("Button").GetComponent<Button>().onClick.AddListener(() => basket.Add(data.item));
         }
+    }
+
+    private void OpenBasket()
+    {
+        itemListSection.SetActive(false);
+        basketScreen.SetActive(true);
     }
 }
