@@ -110,7 +110,8 @@ public class DomiShopBasket : MonoBehaviour
         if (!MoneySystem.Instance.TryGetPayment(sum)) return;
 
         foreach (var item in baskets) {
-            RefrigeratorSystem.Instance.GiveInventory(Instantiate(item.Key));
+            for (int i = 0; i < item.Value; i++)
+                RefrigeratorSystem.Instance.GiveInventory(Instantiate(item.Key));
         }
 
         foreach (var item in baskets.ToArray()) {
