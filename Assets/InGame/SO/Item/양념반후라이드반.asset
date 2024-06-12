@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1847a842f63846f48868d8f8e99b1cea, type: 3}
+  m_Name: "\uC591\uB150\uBC18\uD6C4\uB77C\uC774\uB4DC\uBC18"
+  m_EditorClassIdentifier: 
+  type: 1
+  id: 
+  name: "\uC591\uB150\uBC18 \uD6C4\uB77C\uC774\uB4DC \uBC18"
+  description: "\uC73C\uD5E4\uD5E4\t"
+  image: {fileID: 21300000, guid: f0e6da53a8640f24fab0b82b01d444d7, type: 3}
+  image_big: {fileID: 21300000, guid: e8bf051d870c2324b9ad44711389c0dc, type: 3}
+  chickenType: 2
