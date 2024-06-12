@@ -30,6 +30,9 @@ public class RefrigeratorSystem : MonoSingleton<RefrigeratorSystem>
     [SerializeField] Transform content;
     [SerializeField] GameObject contentBox;
 
+    // 소스만 위한 것 ㄹㅇ
+    public bool sourceUseDropped = false;
+
     private void Awake() {
         // SO 복사
         if (inventory != null) {
@@ -88,6 +91,18 @@ public class RefrigeratorSystem : MonoSingleton<RefrigeratorSystem>
         var box = Instantiate(contentBox, content);
         box.GetComponent<RefrigeratorDrag>().Init(this, item);
         box.transform.Find("Icon").GetComponent<Image>().sprite = item.GetImage();
+        
+        // 만약 소스일 경우에
+        if (item.GetItemType() == ItemType.Source) {
+            SourceItem source = item as SourceItem;
+            
+            // 바 크기 구함
+            float barSize = (float)source.GetCurrentSize() / source.GetMaxSize();
+            
+            var barTrm = box.transform.Find("Bar");
+            barTrm.gameObject.SetActive(true);
+            barTrm.Find("BarIn").localScale = new Vector3(barSize, 1, 1);            
+        }
     }
 
     void CategoryActive(int idx, bool active) {

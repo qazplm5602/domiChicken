@@ -67,6 +67,12 @@ public class CountertopTableSystem : DropResponse, IDomiItemHandler
         CountertopRecipe recipe = recipes.Find(v => (currentItem.ItemEquals(v.item1) || currentItem.ItemEquals(v.item2)) && (item.ItemEquals(v.item1) || item.ItemEquals(v.item2)) && (v.item1.ItemEquals(v.item2) == currentItem.ItemEquals(item)));
         if (recipe.finalItem == null) return false;
 
+        // 만약 소스면
+        if (item.GetItemType() == ItemType.Source) {
+            if ((item as SourceItem).GetCurrentSize() <= 0) return false; // 소스안에 소스가 없음
+            RefrigeratorSystem.Instance.sourceUseDropped = true; // 소스 드랍 햇오
+        }
+
         print($"조합 완료. {recipe.item1} + {recipe.item2} = {recipe.finalItem}");
 
         currentItem = recipe.finalItem;

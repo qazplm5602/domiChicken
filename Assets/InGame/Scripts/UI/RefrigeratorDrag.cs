@@ -17,6 +17,10 @@ public class RefrigeratorDrag : DragRequest, IDomiItemHandler
 
     protected override RectTransform CreateDragItem()
     {
+        // 소스스스스
+        if (domiItem.GetItemType() == ItemType.Source)
+            _manager.sourceUseDropped = false;
+        
         Sprite icon = transform.Find("Icon").GetComponent<Image>().sprite;
         
         var dragObj = new GameObject("drag");
@@ -38,6 +42,16 @@ public class RefrigeratorDrag : DragRequest, IDomiItemHandler
         print($"OnDropEvent {winBoth} {result}");
         if (winBoth || !result) return; // 같은건 안받슴니다.
         
+        // 소스에다가 사용까지 허용함
+        if (domiItem.GetItemType() == ItemType.Source && _manager.sourceUseDropped) {
+            _manager.sourceUseDropped = false;
+
+            var source = domiItem as SourceItem;
+            source.SetSize(source.GetCurrentSize() - 1);
+
+            transform.Find("Bar/BarIn").localScale = new Vector3((float)source.GetCurrentSize() / source.GetMaxSize(), 1, 1);
+            return;
+        }
         _manager.RemoveItem(domiItem);
     }
 }

@@ -37,3 +37,9 @@ MonoBehaviour:
       type: 2}
     <finalItem>k__BackingField: {fileID: 11400000, guid: a9fc67637e2d5054586a3439186d655f,
       type: 2}
+  - <item1>k__BackingField: {fileID: 11400000, guid: 803326a991b80704ea75ad2cd744ffb7,
+      type: 2}
+    <item2>k__BackingField: {fileID: 11400000, guid: a818486080765e34aa49d1607b9945dd,
+      type: 2}
+    <finalItem>k__BackingField: {fileID: 11400000, guid: 73ded809ba79c974e9eb8a92ce4025d4,
+      type: 2}

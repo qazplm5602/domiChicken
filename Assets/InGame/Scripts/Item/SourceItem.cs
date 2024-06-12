@@ -14,12 +14,13 @@ public class SourceItem : DomiItem
     [SerializeField] int maxSize;
     int currentSize;
 
-    private void OnEnable() {
+    private void Awake() {
         currentSize = maxSize;
     }
 
-    int GetMaxSize() => maxSize;
-    int GetCurrentSize() => currentSize;
+    public int GetMaxSize() => maxSize;
+    public int GetCurrentSize() => currentSize;
+    public void SetSize(int value) => currentSize = Mathf.Min(value, maxSize);
 
     public override bool ItemEquals(DomiItem target)
     {
