@@ -5,6 +5,7 @@ using UnityEngine;
 public enum ChickenItemType {
     Default,
     Seasoned, // 양념
+    Seasoned_RiceCake, // 양념 & 떡
     SeasonedHalfDefault, // 양념 반 후라이드
     Soy, // 간장
     Soy_RiceCake, // 간장 & 떡

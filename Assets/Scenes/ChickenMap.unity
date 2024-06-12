@@ -3919,8 +3919,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
+      propertyPath: menus.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[1].name
+      value: "\uC18C\uC2A4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[2].name
+      value: "\uC18C\uC2A4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
       propertyPath: menus.Array.data[0].sellItems.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[1].sellItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[2].sellItems.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
@@ -3930,8 +3955,52 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
+      propertyPath: menus.Array.data[1].sellItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: a818486080765e34aa49d1607b9945dd,
+        type: 2}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[1].sellItems.Array.data[1].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 25b45e7825d8fc84da83d769b0e79fd3,
+        type: 2}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[1].sellItems.Array.data[2].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d0f7c5ba06c75145b3a2de982c24fa5,
+        type: 2}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[2].sellItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: a818486080765e34aa49d1607b9945dd,
+        type: 2}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
       propertyPath: menus.Array.data[0].sellItems.Array.data[2].price
       value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[1].sellItems.Array.data[0].price
+      value: 1234
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[1].sellItems.Array.data[1].price
+      value: 5555
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[1].sellItems.Array.data[2].price
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 211382870870139507, guid: 01000f69c3e9a0c479666920e10e7ba9,
+        type: 3}
+      propertyPath: menus.Array.data[2].sellItems.Array.data[0].price
+      value: 1234
       objectReference: {fileID: 0}
     - target: {fileID: 267816290324206273, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
