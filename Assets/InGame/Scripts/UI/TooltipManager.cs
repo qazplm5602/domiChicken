@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TooltipManager : MonoSingleton<TooltipManager>
 {
@@ -26,6 +27,12 @@ public class TooltipManager : MonoSingleton<TooltipManager>
         
         title.text = item.GetName();
         desc.text = item.GetDesc();
+    
+        // 레전드 코드
+        title.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+        desc.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+        main.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
+        main.GetComponent<ContentSizeFitter>().SetLayoutVertical();
 
         main.SetActive(true);
         _group.DOKill();
