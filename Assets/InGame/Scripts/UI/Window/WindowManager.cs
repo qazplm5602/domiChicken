@@ -7,7 +7,8 @@ public enum WindowType {
     Fry,
     Refrigerator,
     Countertop,
-    Shop
+    Shop,
+    Delivery
 }
 
 public class WindowManager : MonoSingleton<WindowManager>
