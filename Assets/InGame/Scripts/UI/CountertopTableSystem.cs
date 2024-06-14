@@ -11,12 +11,14 @@ public class CountertopTableSystem : DropResponse, IDomiItemHandler
     [SerializeField] CountertopRecipeBookSO[] recipeGroups;
 
     DragRequest myDragSys;
+    TooltipHelper tooltip;
     DomiItem currentItem = null;
 
     List<CountertopRecipe> recipes;
 
     private void Awake() {
         myDragSys = GetComponent<DragRequest>();
+        tooltip = GetComponent<TooltipHelper>();
 
         recipes = new();
         foreach (var group in recipeGroups)
@@ -34,9 +36,11 @@ public class CountertopTableSystem : DropResponse, IDomiItemHandler
 
         icon.color = Color.white;
         icon.sprite = currentItem.GetImage(true);
+        tooltip.Refresh();
     }
     public void Remove() {
         currentItem = null;
+        tooltip.Remove();
         UpdateTableUI();
     }
 
@@ -45,8 +49,10 @@ public class CountertopTableSystem : DropResponse, IDomiItemHandler
         if (myDragSys == dragRequest) return false; // 자기 자신이 자기 자신을 놓음 ???
 
         bool isKnife = winBoth && dragRequest is CountertopKnifeDrag;
+        bool isPackage = currentItem != null && currentItem.GetItemType() == ItemType.Other && (currentItem as OtherItem).otherType == OtherItemType.Package;
         
         DomiItem item = dragRequest.GetComponent<IDomiItemHandler>()?.GetDomiItem();
+
         if (!isKnife) {
             if (item == null) return false; // 아이템 못찾음
             
@@ -56,9 +62,21 @@ public class CountertopTableSystem : DropResponse, IDomiItemHandler
                 currentItem = item;
                 UpdateTableUI();
                 return true;
+            } else if (isPackage) { // 포장
+                (currentItem as OtherItem).packItems.Add(item);
+                UpdateTableUI();
+                return true;
             }
         } else {
             if (currentItem == null) return false;
+            if (isPackage) { // 패키지 해제
+                foreach (var data in (currentItem as OtherItem).packItems)
+                    RefrigeratorSystem.Instance.GiveInventory(data);
+
+                Remove();
+                return true;
+            }
+
             item = knife;
         }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,5 +23,16 @@ public class TooltipHelper : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!itemHandler.GetDomiItem()) return;
         TooltipManager.Instance.Hide(gameObject);
+    }
+
+    public void Refresh() {
+        if (TooltipManager.Instance.GetTarget() != gameObject) return;
+        OnPointerEnter(null); // 마우스 올린척
+    }
+
+    public void Remove()
+    {
+        if (TooltipManager.Instance.GetTarget() == gameObject)
+            TooltipManager.Instance.Hide(gameObject);
     }
 }

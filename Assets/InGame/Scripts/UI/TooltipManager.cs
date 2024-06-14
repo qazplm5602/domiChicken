@@ -47,4 +47,6 @@ public class TooltipManager : MonoSingleton<TooltipManager>
         _group.DOKill();
         _group.DOFade(0, 0.2f).OnComplete(() => main.SetActive(false));
     }
+
+    public GameObject GetTarget() => requestTarget;
 }
