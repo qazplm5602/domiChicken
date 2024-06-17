@@ -11,6 +11,7 @@ public enum ItemType {
     Chicken,
     Ingredient,
     Source,
+    Drink,
     Other
 }
 
