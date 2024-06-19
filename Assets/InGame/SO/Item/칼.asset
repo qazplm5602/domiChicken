@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5273b8a6b360b7f40a7174fbaaebe4cd, type: 3}
   m_Name: "\uCE7C"
   m_EditorClassIdentifier: 
-  type: 4
+  type: 5
   id: 
   name: 
   description: 
   image: {fileID: 0}
   image_big: {fileID: 0}
   <otherType>k__BackingField: 0
+  packItems: []

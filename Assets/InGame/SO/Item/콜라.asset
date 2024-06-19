@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830701d5a3b46384d8f268cd4ade44cf, type: 3}
+  m_Name: "\uCF5C\uB77C"
+  m_EditorClassIdentifier: 
+  type: 4
+  id: 
+  name: "\uCF5C\uB77C"
+  description: "\uCF5C\uB77C\u314F\u314F"
+  image: {fileID: 21300000, guid: 21a0a25e94ab88c4391a738774120c18, type: 3}
+  image_big: {fileID: 21300000, guid: ee1a8705738f3434db3bdec077c31adb, type: 3}
+  <drinkType>k__BackingField: 1

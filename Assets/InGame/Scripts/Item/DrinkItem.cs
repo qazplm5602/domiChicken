@@ -9,6 +9,7 @@ public enum DrinkItemType {
     Fanta // 환타
 }
 
+[CreateAssetMenu(menuName = "SO/Item/Drink")]
 public class DrinkItem : DomiItem
 {
     [field: SerializeField] public DrinkItemType drinkType { get; private set; }
