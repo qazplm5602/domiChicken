@@ -1189,7 +1189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000043308362}
+  m_AnchoredPosition: {x: 0, y: 0.000931611}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &300874178
@@ -5580,18 +5580,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delivery: {fileID: 564829385378895611}
   assess: {fileID: 1804057665}
-  chickenItems:
-  - {fileID: 11400000, guid: 803326a991b80704ea75ad2cd744ffb7, type: 2}
-  - {fileID: 11400000, guid: 242b620814a5c1a418e5cf9dccc6c1e0, type: 2}
-  - {fileID: 11400000, guid: 6844b596450416d4db8edba15c68d38d, type: 2}
-  - {fileID: 11400000, guid: e167070aadf4246408900f0701f368e3, type: 2}
-  - {fileID: 11400000, guid: 73ded809ba79c974e9eb8a92ce4025d4, type: 2}
-  - {fileID: 11400000, guid: a9fc67637e2d5054586a3439186d655f, type: 2}
-  drinkItems:
-  - {fileID: 11400000, guid: ea82ea95d119d67439b07e2c0892e134, type: 2}
-  - {fileID: 11400000, guid: f022b04238ad6154ca8e7b21b62aa30c, type: 2}
-  - {fileID: 11400000, guid: e8215589aa6f70c438cbe76ba2a1e92d, type: 2}
-  otherItems: []
+  chickenSell: {fileID: 11400000, guid: f74781211af60974280efdafaa759571, type: 2}
+  drinkSell: {fileID: 11400000, guid: 7cbf6fd987ced474cbf52777ec1571ee, type: 2}
+  otherSell: {fileID: 11400000, guid: 2a6d166e207efc5438398724e5619386, type: 2}
   placeNames:
   - "\uB3C4\uBBF8"
   - "\uAD11\uC8FC"
