@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -41,6 +42,11 @@ public class TutorialBoxUI : MonoBehaviour
     }
 
     public void SetPage(bool next) {
+        if (next && (page + 1) >= list.Length) {
+            SceneManager.LoadScene("ChickenMap");
+            return;
+        }
+
         if ((!next && page == 0) || (next && page >= list.Length - 1)) return;
 
         if (sequence != null) {
