@@ -26,6 +26,9 @@ public class MoneySystem : MonoSingleton<MoneySystem>
         SetMoney(_money - value);
         return true;
     }
+    public void GiveMoney(int value) {
+        SetMoney(_money + value);
+    }
 
     void UpdateUI() {
         moneyT.text = $"{_money:N0}원";

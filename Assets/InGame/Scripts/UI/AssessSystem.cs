@@ -23,27 +23,6 @@ public class AssessSystem : MonoBehaviour
 
     private void Awake() {
         assessDatas = new();
-
-        Add(new AssessData() {
-            content = "밍",
-            name = "도미",
-            score = 3
-        });
-        Add(new AssessData() {
-            content = "밍",
-            name = "도미222",
-            score = 3.5f
-        });
-        // Add(new AssessData() {
-        //     content = "밍sdadsad",
-        //     name = "도미3333",
-        //     score = 4.8f
-        // });
-        // Add(new AssessData() {
-        //     content = "밍asdad",
-        //     name = "도미6666",
-        //     score = 4.2f
-        // });
     }
 
     public void Add(AssessData data) {

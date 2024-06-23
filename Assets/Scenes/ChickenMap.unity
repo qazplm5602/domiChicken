@@ -1189,7 +1189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000931611}
+  m_AnchoredPosition: {x: 0, y: 0.00020565288}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &300874178
@@ -5591,8 +5591,20 @@ MonoBehaviour:
   - "\uC544\uD30C\uD2B8"
   - "\uBE4C\uB77C"
   - 
-  firstNames: []
-  lastNames: []
+  firstNames:
+  - "\uAE40"
+  - "\uAC15"
+  - "\uAC10"
+  - "\uBBFC"
+  - "\uC5C4"
+  lastNames:
+  - "\uB3C4\uBBF8"
+  - "\uC0AC\uB78C"
+  - "\uBC14\uC624"
+  - "\uBBFC\uC218"
+  - "\uC6CC\uC53D\uC2DC"
+  - "\uCD98\uC2DD"
+  - "\uC900\uC2DD"
 --- !u!1 &1914005665
 GameObject:
   m_ObjectHideFlags: 0
@@ -6667,7 +6679,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 400467374}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7254,12 +7266,12 @@ PrefabInstance:
     - target: {fileID: 5956908207324814977, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -460.84418
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5956908207324814977, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 946.1383
+      value: -32.486
       objectReference: {fileID: 0}
     - target: {fileID: 5956908207324814977, guid: 01000f69c3e9a0c479666920e10e7ba9,
         type: 3}
@@ -7998,12 +8010,12 @@ PrefabInstance:
     - target: {fileID: 6331786579194566711, guid: b0b485c27b2739b4e96d3b827b123f00,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 108.15582
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6331786579194566711, guid: b0b485c27b2739b4e96d3b827b123f00,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 863.1383
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6331786579194566711, guid: b0b485c27b2739b4e96d3b827b123f00,
         type: 3}
