@@ -2903,12 +2903,12 @@ PrefabInstance:
     - target: {fileID: 4485582894882896231, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 55
+      value: -164
       objectReference: {fileID: 0}
     - target: {fileID: 4485582894882896231, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 83
+      value: 62.764
       objectReference: {fileID: 0}
     - target: {fileID: 4485582894882896231, guid: ead3f56d88460fb4ab99352b289b6d07,
         type: 3}
@@ -3010,7 +3010,27 @@ MonoBehaviour:
     - item: {fileID: 11400000, guid: 8f1ed31069a1845419a158be673772d8, type: 2}
       price: 2000
     - item: {fileID: 11400000, guid: 958971c82bcda844a9de27bbb620dcfb, type: 2}
-      price: 100000
+      price: 10000
+    - item: {fileID: 11400000, guid: 6d0f7c5ba06c75145b3a2de982c24fa5, type: 2}
+      price: 2000
+  - name: "\uC18C\uC2A4"
+    sellItems:
+    - item: {fileID: 11400000, guid: a818486080765e34aa49d1607b9945dd, type: 2}
+      price: 1234
+    - item: {fileID: 11400000, guid: 25b45e7825d8fc84da83d769b0e79fd3, type: 2}
+      price: 5555
+  - name: "\uC74C\uB8CC"
+    sellItems:
+    - item: {fileID: 11400000, guid: ea82ea95d119d67439b07e2c0892e134, type: 2}
+      price: 1000
+    - item: {fileID: 11400000, guid: f022b04238ad6154ca8e7b21b62aa30c, type: 2}
+      price: 1000
+    - item: {fileID: 11400000, guid: e8215589aa6f70c438cbe76ba2a1e92d, type: 2}
+      price: 1500
+  - name: "\uAE30\uD0C0"
+    sellItems:
+    - item: {fileID: 11400000, guid: 69690155638a2c041a8685984d1783bc, type: 2}
+      price: 100
   menuSection: {fileID: 7046305690629244997}
   menuTemplate: {fileID: 7448167697558425132, guid: 26392d299385f594c9443e5b538064d8,
     type: 3}
@@ -3036,6 +3056,7 @@ MonoBehaviour:
   _boxTemplate: {fileID: 7486631322247721260, guid: 5eb1e892407b65741b2a0ed72822e414,
     type: 3}
   _priceSumT: {fileID: 142908671870463046}
+  buyBtn: {fileID: 4273207779924565191}
 --- !u!1001 &8699401918322082537
 PrefabInstance:
   m_ObjectHideFlags: 0

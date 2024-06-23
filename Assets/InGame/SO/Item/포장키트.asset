@@ -17,6 +17,6 @@ MonoBehaviour:
   name: "\uD3EC\uC7A5\uD0A4\uD2B8"
   description: "\uD3EC\uC7A5\uD0A4\uD2B8 \uC784\uB2C8\uB2E4."
   image: {fileID: 21300000, guid: c3daa136bac7a9649b65d70c0cd0db51, type: 3}
-  image_big: {fileID: 0}
+  image_big: {fileID: 21300000, guid: 22f97b406035e4a4ca2876a364651a5a, type: 3}
   <otherType>k__BackingField: 1
   packItems: []

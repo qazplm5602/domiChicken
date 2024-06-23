@@ -19,6 +19,7 @@ public class RefrigeratorSystem : MonoSingleton<RefrigeratorSystem>
         new RefrigeratorCategory() { title = "닭", item = ItemType.Ingredient },
         new RefrigeratorCategory() { title = "재료", item = ItemType.Ingredient },
         new RefrigeratorCategory() { title = "소스", item = ItemType.Source },
+        new RefrigeratorCategory() { title = "음료", item = ItemType.Drink },
         new RefrigeratorCategory() { title = "기타", item = ItemType.Other },
     };
 

@@ -202,7 +202,7 @@ public class UserSystem : MonoSingleton<UserSystem>
         if (excludeItems.Count > 0) {
             content.Append(goodWords[Random.Range(0, goodWords.Length)]).Append(" ");
             
-            if (excludeItems.Count > 1) {
+            if (excludeItems.Count > 1 || indexingItem.Count == 1 || Random.Range(0, 2) == Random.Range(0, 2)) {
                 score = 1;
 
                 content.Append(System.String.Join(", ", excludeItems.Select(v => v.GetName())));
@@ -235,7 +235,7 @@ public class UserSystem : MonoSingleton<UserSystem>
         }
 
         if (wrongTextStart) {
-            content.Append(" 가 빠졋네용.");
+            content.Append(" 이(가) 빠졋네용.");
         }
 
         assess.Add(new AssessData() {

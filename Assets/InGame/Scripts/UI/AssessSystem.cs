@@ -23,6 +23,10 @@ public class AssessSystem : MonoBehaviour
 
     private void Awake() {
         assessDatas = new();
+
+        foreach (var item in mainStar)
+            item.localScale = Vector3.zero;
+        mainText.text = $"평점: 0";
     }
 
     public void Add(AssessData data) {
