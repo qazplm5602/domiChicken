@@ -195,7 +195,6 @@ public class UserSystem : MonoSingleton<UserSystem>
         }
     
         float score = 5;
-        score = Mathf.Clamp(score, 1, 5);
         StringBuilder content = new StringBuilder();
         
 
@@ -233,6 +232,7 @@ public class UserSystem : MonoSingleton<UserSystem>
                 content.Append($"{item.Value}개");
             }
         }
+        score = Mathf.Clamp(score, 1, 5);
 
         if (wrongTextStart) {
             content.Append(" 이(가) 빠졋네용.");
@@ -244,7 +244,7 @@ public class UserSystem : MonoSingleton<UserSystem>
             score = score
         });
 
-        MoneySystem.Instance.GiveMoney(orderData.price);
+        MoneySystem.Instance.GiveMoney(Mathf.FloorToInt(orderData.price * (score / 5)));
 
         // 마무리
         orderList.Remove(orderId);
