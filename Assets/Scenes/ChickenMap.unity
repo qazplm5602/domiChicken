@@ -3226,6 +3226,7 @@ GameObject:
   - component: {fileID: 1838242431}
   - component: {fileID: 1838242432}
   - component: {fileID: 1838242433}
+  - component: {fileID: 1838242434}
   m_Layer: 0
   m_Name: _Manager
   m_TagString: Untagged
@@ -3301,6 +3302,22 @@ MonoBehaviour:
   - "\uC6CC\uC53D\uC2DC"
   - "\uCD98\uC2DD"
   - "\uC900\uC2DD"
+--- !u!114 &1838242434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838242430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b09a0b05860f940abca9f330cdf490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeT: {fileID: 1985743401}
+  icon: {fileID: 151217563}
+  dayI: {fileID: 21300000, guid: c69f897ed18432b45a8842f763b718f0, type: 3}
+  nightI: {fileID: 21300000, guid: 2f76c55cf8fa4044dbe94133f083edc6, type: 3}
 --- !u!1 &1945459657
 GameObject:
   m_ObjectHideFlags: 0
